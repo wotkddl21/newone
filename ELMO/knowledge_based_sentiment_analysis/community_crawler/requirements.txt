@@ -1,0 +1,9 @@
+selenium
+pyperclip
+bs4
+cfscrape
+numpy
+scrapy
+google-api-python-client
+oauth2client
+lzstring
