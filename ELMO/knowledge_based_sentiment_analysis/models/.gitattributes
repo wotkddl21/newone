@@ -1,0 +1,2 @@
+word2vec_ko.model.trainables.syn1neg.npy filter=lfs diff=lfs merge=lfs -text
+word2vec_ko.model.wv.vectors.npy filter=lfs diff=lfs merge=lfs -text
