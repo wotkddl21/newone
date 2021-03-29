@@ -1,0 +1,866 @@
+argv[1] :test
+Community test crawling start.
+Multi-Process : 1
+"test" list crawling start from slrclub.
+http://www.slrclub.com/service/search/?keyword=test&category=
+<!DOCTYPE HTML>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="no-cache, no-store, must-revalidate" http-equiv="Cache-Control"/>
+  <meta content="no-cache" http-equiv="Pragma"/>
+  <meta content="noindex, nofollow" name="robots"/>
+  <title>
+   SLRCLUB, 디지털 사진가를 위한 커뮤니티
+  </title>
+  <meta content="SLRCLUB, Envision Community" name="author"/>
+  <meta content="http://www.slrclub.com/service/search/?keyword=test&amp;category=" property="url"/>
+  <meta content="http://www.slrclub.com/service/search/?keyword=test&amp;category=" property="og:url"/>
+  <meta content="website" property="og:type"/>
+  <meta content="SLR클럽" property="og:site_name"/>
+  <meta content="" property="og:title"/>
+  <meta content="" property="og:description"/>
+  <link href="/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"/>
+  <link href="/favicon.ico" rel="icon" type="image/vnd.microsoft.icon"/>
+  <link href="/css/common.css?ver=200053101" rel="stylesheet" type="text/css"/>
+  <link href="/css/bbs.css?ver=200053101" rel="stylesheet" type="text/css"/>
+  <link href="/css/search.css?ver=200053101" rel="stylesheet" type="text/css"/>
+  <!--[if lt IE 7]><script type="text/javascript" src="/js/json2.js"></script><![endif]-->
+  <!--[if IE 7]><script type="text/javascript" src="/js/json2.js"></script><![endif]-->
+  <script src="/js/jquery-1.12.0.min.js?ver=200053101" type="text/javascript">
+  </script>
+  <script src="/js/common.js?ver=200053101" type="text/javascript">
+  </script>
+  <script src="/js/common_bbs.js?ver=200053101" type="text/javascript">
+  </script>
+ </head>
+ <body class="body_background">
+  <div class="layout" id="header">
+   <div id="logo">
+    <a href="http://www.slrclub.com/">
+     <img alt="SLR클럽" class="rt" height="90" src="http://media.slrclub.com/main/2015/gnb/2020033001.png" width="150"/>
+    </a>
+   </div>
+   <div id="searchWrap">
+    <div class="search">
+     <form accept-charset="utf-8" action="/service/search/" method="get" onsubmit="if(this.keyword.value.length &lt; 2) { alert('검색어를 2글자 이상 입력하여 주세요.'); return false; }">
+      <span class="inwrap">
+       <input class="keyword" name="keyword" type="text"/>
+      </span>
+      <input name="category" type="hidden" value=""/>
+      <button alt="검색" class="gb bt_gnb_srch submit" type="image">
+      </button>
+     </form>
+     <div id="autoKwd">
+      <!--					<a href="#" onclick="return false"><img src="http://media.slrclub.com/main/2015/gnb/bt_gnb_arrow.gif" class="rt" width="11" height="8" alt="topkwd"></a> -->
+      <button class="gb bt_gnb_arrow" type="image">
+      </button>
+     </div>
+    </div>
+    <div id="top_popkwd">
+     <h3>
+      인기 검색어 순위
+     </h3>
+     <ol>
+      <li class="first">
+       <span>
+        1
+       </span>
+       <a href="/service/search/?keyword=%EB%9D%BC%EC%9D%B4%EC%B9%B4&amp;category=&amp;x=0&amp;y=0">
+        라이카
+       </a>
+      </li>
+      <li class="">
+       <span>
+        2
+       </span>
+       <a href="/service/search/?keyword=%EC%A3%BC%EC%8B%9D&amp;category=&amp;x=0&amp;y=0">
+        주식
+       </a>
+      </li>
+      <li class="">
+       <span>
+        3
+       </span>
+       <a href="/service/search/?keyword=a9&amp;category=&amp;x=0&amp;y=0">
+        a9
+       </a>
+      </li>
+      <li class="">
+       <span>
+        4
+       </span>
+       <a href="/service/search/?keyword=%ED%9B%84%EC%A7%80&amp;category=&amp;x=0&amp;y=0">
+        후지
+       </a>
+      </li>
+      <li class="">
+       <span>
+        5
+       </span>
+       <a href="/service/search/?keyword=%EB%8C%80%EA%B5%AC&amp;category=&amp;x=0&amp;y=0">
+        대구
+       </a>
+      </li>
+      <li class="">
+       <span>
+        6
+       </span>
+       <a href="/service/search/?keyword=%ED%83%9C%ED%92%8D&amp;category=&amp;x=0&amp;y=0">
+        태풍
+       </a>
+      </li>
+      <li class="">
+       <span>
+        7
+       </span>
+       <a href="/service/search/?keyword=z6&amp;category=&amp;x=0&amp;y=0">
+        z6
+       </a>
+      </li>
+      <li class="">
+       <span>
+        8
+       </span>
+       <a href="/service/search/?keyword=%EA%B0%A4%EB%9F%AD%EC%8B%9C&amp;category=&amp;x=0&amp;y=0">
+        갤럭시
+       </a>
+      </li>
+      <li class="">
+       <span>
+        9
+       </span>
+       <a href="/service/search/?keyword=%EB%8B%88%EC%BD%98&amp;category=&amp;x=0&amp;y=0">
+        니콘
+       </a>
+      </li>
+      <li class="">
+       <span>
+        10
+       </span>
+       <a href="/service/search/?keyword=%EC%95%84%EB%B2%A0&amp;category=&amp;x=0&amp;y=0">
+        아베
+       </a>
+      </li>
+      <li class="">
+       <span>
+        11
+       </span>
+       <a href="/service/search/?keyword=%EC%86%8C%EB%8B%88&amp;category=&amp;x=0&amp;y=0">
+        소니
+       </a>
+      </li>
+      <li class="">
+       <span>
+        12
+       </span>
+       <a href="/service/search/?keyword=eos+r&amp;category=&amp;x=0&amp;y=0">
+        eos r
+       </a>
+      </li>
+      <li class="">
+       <span>
+        13
+       </span>
+       <a href="/service/search/?keyword=70-200&amp;category=&amp;x=0&amp;y=0">
+        70-200
+       </a>
+      </li>
+      <li class="">
+       <span>
+        14
+       </span>
+       <a href="/service/search/?keyword=rf&amp;category=&amp;x=0&amp;y=0">
+        rf
+       </a>
+      </li>
+      <li class="">
+       <span>
+        15
+       </span>
+       <a href="/service/search/?keyword=%EB%8C%80%EC%A0%84&amp;category=&amp;x=0&amp;y=0">
+        대전
+       </a>
+      </li>
+      <li class="">
+       <span>
+        16
+       </span>
+       <a href="/service/search/?keyword=%ED%8E%9C%ED%83%81%EC%8A%A4&amp;category=&amp;x=0&amp;y=0">
+        펜탁스
+       </a>
+      </li>
+      <li class="">
+       <span>
+        17
+       </span>
+       <a href="/service/search/?keyword=%EA%B3%A8%ED%94%84&amp;category=&amp;x=0&amp;y=0">
+        골프
+       </a>
+      </li>
+      <li class="">
+       <span>
+        18
+       </span>
+       <a href="/service/search/?keyword=r5&amp;category=&amp;x=0&amp;y=0">
+        r5
+       </a>
+      </li>
+      <li class="">
+       <span>
+        19
+       </span>
+       <a href="/service/search/?keyword=a7&amp;category=&amp;x=0&amp;y=0">
+        a7
+       </a>
+      </li>
+      <li class="">
+       <span>
+        20
+       </span>
+       <a href="/service/search/?keyword=5d&amp;category=&amp;x=0&amp;y=0">
+        5d
+       </a>
+      </li>
+      <li class="">
+       <span>
+        21
+       </span>
+       <a href="/service/search/?keyword=r6&amp;category=&amp;x=0&amp;y=0">
+        r6
+       </a>
+      </li>
+      <li class="">
+       <span>
+        22
+       </span>
+       <a href="/service/search/?keyword=%EB%B6%80%EC%82%B0&amp;category=&amp;x=0&amp;y=0">
+        부산
+       </a>
+      </li>
+      <li class="">
+       <span>
+        23
+       </span>
+       <a href="/service/search/?keyword=%EB%85%B8%ED%8A%B8%EB%B6%81&amp;category=&amp;x=0&amp;y=0">
+        노트북
+       </a>
+      </li>
+      <li class="">
+       <span>
+        24
+       </span>
+       <a href="/service/search/?keyword=6d&amp;category=&amp;x=0&amp;y=0">
+        6d
+       </a>
+      </li>
+      <li class="">
+       <span>
+        25
+       </span>
+       <a href="/service/search/?keyword=a7m3&amp;category=&amp;x=0&amp;y=0">
+        a7m3
+       </a>
+      </li>
+      <li class="">
+       <span>
+        26
+       </span>
+       <a href="/service/search/?keyword=%EC%95%84%EC%9D%B4%ED%8F%B0&amp;category=&amp;x=0&amp;y=0">
+        아이폰
+       </a>
+      </li>
+      <li class="">
+       <span>
+        27
+       </span>
+       <a href="/service/search/?keyword=%EC%BA%90%EB%85%BC&amp;category=&amp;x=0&amp;y=0">
+        캐논
+       </a>
+      </li>
+      <li class="">
+       <span>
+        28
+       </span>
+       <a href="/service/search/?keyword=%EC%A4%91%EA%B3%A0%EC%B0%A8&amp;category=&amp;x=0&amp;y=0">
+        중고차
+       </a>
+      </li>
+     </ol>
+    </div>
+   </div>
+   <div class="ad" id="main-ad">
+    <script src="https://compass.adop.cc/assets/js/adop/adop.js?v=14">
+    </script>
+    <ins _adop_type="js" _adop_zon="c04da323-0f47-41d5-8520-2429d5215b61" _page_url="" class="adsbyadop" style="display:inline-block;width:468px;height:82px;">
+    </ins>
+   </div>
+   <ul id="gnb">
+    <li class="menu first gb community">
+     <div class="sub">
+      <ul>
+       <li>
+        <a href="/bbs/zboard.php?id=free">
+         자유게시판
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=equip_board">
+         포토스트림
+        </a>
+       </li>
+       <li>
+        <a href="/cafe.slr">
+         소모임
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=marketinfo">
+         시장정보
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=pr">
+         직접홍보
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=sourcing">
+         해외직구
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=ad_free">
+         성인게시판
+        </a>
+       </li>
+      </ul>
+      <ul>
+       <li>
+        <a href="/bbs/zboard.php?id=vcoin">
+         가상화폐게시판
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=pc">
+         PC게시판
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=insurance">
+         보험게시판
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=discuss">
+         이슈토론방
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=pds">
+         자료실
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=slr_qna">
+         SLR지식인
+        </a>
+       </li>
+      </ul>
+     </div>
+    </li>
+    <li class="menu gb forum">
+     <div class="sub">
+      <ul>
+       <li>
+        <a href="/bbs/zboard.php?id=canon_d30_forum">
+         Canon
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=contax_forum">
+         Contax
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=fuji_s1pro_forum">
+         FujiFilm
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=hasselblad_forum">
+         Hasselblad
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=kodak_forum">
+         Kodak
+        </a>
+       </li>
+      </ul>
+      <ul>
+       <li>
+        <a href="/bbs/zboard.php?id=nikon_d1_forum">
+         Nikon
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=leica_forum">
+         Leica
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=olympus_e10_forum">
+         Olympus
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=panasonic_forum">
+         Panasonic
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=pentax_forum">
+         Pentax
+        </a>
+       </li>
+      </ul>
+      <ul>
+       <li>
+        <a href="/bbs/zboard.php?id=minolta_forum">
+         Sony/Minolta
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=samsung_forum">
+         Samsung
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=sigma_forum">
+         Sigma
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=rf_forum">
+         RF
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=digitalback_forum">
+         Digital Back
+        </a>
+       </li>
+      </ul>
+      <ul>
+       <li>
+        <a href="/bbs/zboard.php?id=samyang_forum">
+         Samyang
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=sigma_lforum">
+         Lens Sigma
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=tamron_lforum">
+         Lens Tamron
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=tokina_lforum">
+         Lens Tokina
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=film_forum">
+         Film
+        </a>
+       </li>
+      </ul>
+      <ul>
+       <li>
+        <a href="/bbs/zboard.php?id=movie_forum">
+         동영상
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=digitaldarkroom">
+         디지털암실
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=digitaldarkroom_request">
+         보정요청
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=common_forum">
+         액세서리
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=photo_forum">
+         사진일반
+        </a>
+       </li>
+      </ul>
+     </div>
+    </li>
+    <li class="menu gb gallery">
+     <div class="sub">
+      <ul>
+       <li>
+        <a href="/bbs/zboard.php?id=today_pictures">
+         오늘의사진
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=work_gallery">
+         작품갤러리
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=theme_gallery">
+         주제갤러리
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=study_gallery">
+         습작갤러리
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=press_gallery">
+         시민기자단
+        </a>
+       </li>
+      </ul>
+     </div>
+    </li>
+    <li class="menu gb information">
+     <div class="sub">
+      <ul>
+       <li>
+        <a href="/bbs/zboard.php?id=slr_review">
+         SLR리뷰
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=user_review">
+         유저사용기
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=common_review">
+         자유사용기
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=user_essay">
+         포토에세이
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=user_lecture">
+         유저강좌
+        </a>
+       </li>
+      </ul>
+      <ul>
+       <li>
+        <a href="/bbs/zboard.php?id=slr_lecture">
+         SLR강좌
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=offrec">
+         출사정보
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=news">
+         뉴스/정보
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=best_review">
+         추천인기글
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=slr_qna">
+         SLR지식인
+        </a>
+       </li>
+      </ul>
+     </div>
+    </li>
+    <li class="menu gb market">
+     <div class="sub">
+      <ul>
+       <li>
+        <a href="/bbs/zboard.php?id=used_market&amp;category=1">
+         팝니다
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=used_market&amp;category=2">
+         삽니다
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=trade_in">
+         보상판매
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=used_market&amp;category=4">
+         교환
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=marketinfo">
+         시장정보
+        </a>
+       </li>
+      </ul>
+      <ul>
+       <li>
+        <a href="/bbs/zboard.php?id=pr">
+         직접홍보
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=sourcing">
+         해외직구
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=used_market&amp;category=5">
+         구인구직
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=marketprotect">
+         장터보호
+        </a>
+       </li>
+       <li>
+        <a href="/bbs/zboard.php?id=finding_equip">
+         도난/분실신고
+        </a>
+       </li>
+      </ul>
+     </div>
+    </li>
+    <li class="menu gb slrmall">
+     <div class="sub">
+      <ul>
+       <li>
+        <a href="http://www.slrclub.com/service/mall/">
+         SLRMALL
+        </a>
+       </li>
+       <li>
+        <a href="http://photo.slrclub.com/main/index.php">
+         SLR포토
+        </a>
+       </li>
+       <li>
+        <a href="https://www.fomex.co.kr">
+         사진영상조명
+        </a>
+       </li>
+       <li>
+        <a href="http://price.slrclub.com/dica">
+         디카/렌즈
+        </a>
+       </li>
+       <li>
+        <a href="http://price.slrclub.com/pc">
+         PC/노트북
+        </a>
+       </li>
+       <li>
+        <a href="http://price.slrclub.com/slr">
+         SLR추천 PC
+        </a>
+       </li>
+      </ul>
+     </div>
+    </li>
+    <li class="menu last gb event">
+    </li>
+   </ul>
+   <script type="text/javascript">
+    gnb_submenu.init();
+   </script>
+   <div class="layout" id="gnbBtmWrap">
+    <div class="gb wide off" id="wide">
+    </div>
+    <div id="login_area">
+     <span class="prelog_btn">
+      <a class="registration" href="http://www.slrclub.com/service/registration/registration.php">
+       회원가입
+      </a>
+      <span class="tm_flag">
+       |
+      </span>
+      <a class="verification" href="https://www.slrclub.com/user/idpw_verification.php">
+       ID/PW찾기
+      </a>
+      <span class="tm_flag">
+       |
+      </span>
+      <a class="login_act" href="#">
+       로그인
+      </a>
+     </span>
+    </div>
+    <div id="dlogin">
+    </div>
+   </div>
+  </div>
+  <div id="container-wrap">
+   <div class="slrbbs">
+    <div id="section2">
+     <div id="content">
+      <div class="mainWrap">
+       <div class="main">
+        <ul class="menu">
+         <li class="first highlight">
+          <a href="/service/search/?keyword=">
+           전체보기
+          </a>
+         </li>
+         <li>
+          <a href="/service/search/?keyword=&amp;section=free">
+           자유게시판
+          </a>
+         </li>
+         <li>
+          <a href="/service/search/?keyword=&amp;section=community">
+           커뮤니티
+          </a>
+         </li>
+         <li>
+          <a href="/service/search/?keyword=&amp;section=market">
+           회원장터
+          </a>
+         </li>
+         <li>
+          <a href="/service/search/?keyword=&amp;section=forum">
+           포럼
+          </a>
+         </li>
+         <li>
+          <a href="/service/search/?keyword=&amp;section=gallery">
+           갤러리
+          </a>
+         </li>
+         <li>
+          <a href="/service/search/?keyword=&amp;section=review">
+           리뷰
+          </a>
+         </li>
+        </ul>
+        <ul class="list">
+         <script type="text/javascript">
+          //공지사항 노출 안함
+			if ($('#slrch')) {
+				$('#slrch').remove();
+			}
+         </script>
+         <div id="err_ct">
+          <h5>
+           SLRCLUB 알림
+          </h5>
+          <p class="err_msg">
+           로그인 후 이용해주세요.
+           <br/>
+           <br/>
+           <img alt="이전화면" onclick="javascript: history.back();" src="http://media.slrclub.com/main/2012/bbs/bt_back.gif"/>
+          </p>
+         </div>
+         <div id="err_btm_bg">
+          <img alt="" height="10" src="http://media.slrclub.com/main/2012/bbs/error_bg_3.gif" width="400"/>
+         </div>
+        </ul>
+       </div>
+      </div>
+      <div class="div_line_end">
+      </div>
+     </div>
+    </div>
+    <script type="text/javascript">
+     var contype;	// 접속 Type, mobile use
+var login = new slrLogin();		gnb.init(login);ovi=0;  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30209133-1']);
+  _gaq.push(['_setDomainName', 'slrclub.com']);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_setSampleRate', '20']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+    </script>
+    <div class="page" id="footer">
+     <div id="copy">
+      COPYRIGHT (C)
+      <span class="sitename">
+       SLRCLUB
+      </span>
+      . ALL RIGHTS RESERVED.
+     </div>
+     <ul class="info">
+      <li class="first">
+       <a href="/privacy/agreement.php">
+        사이트 이용약관
+       </a>
+      </li>
+      <li class="highlight">
+       <a href="/privacy/">
+        개인정보 처리방침
+       </a>
+      </li>
+      <li class="highlight">
+       <a href="/privacy/teenager.php">
+        청소년보호정책
+       </a>
+      </li>
+      <li>
+       <a href="/privacy/email.php">
+        이메일주소 무단수집거부
+       </a>
+      </li>
+      <li>
+       <a href="/privacy/partner.php">
+        제휴문의
+       </a>
+      </li>
+      <li>
+       <a href="/service/support">
+        고객센터
+       </a>
+      </li>
+      <li>
+       <a href="/service/support/contact.slr">
+        이용문의
+       </a>
+      </li>
+     </ul>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>
+
+None
+'NoneType' object has no attribute 'find_all'
+"test" documents 0 crawling start from slrclub.
+Community test crawling finish. spend time : 0:00:04.013736
+Community crawling finish. spend time : 0:00:04.013774

@@ -1,0 +1,29 @@
+Python 설치 및 Scrapy 설치
+
+ 1. Scrapy 인스톨 가이드 참조 : http://doc.scrapy.org/en/latest/intro/install.html#installing-scrapy
+ 2. 파이썬(Python) 설치 및 셋팅 : (이전글 참고)  [Python] 파이썬 설치 및 셋팅 방법
+ 3. pywin32 설치 : http://sourceforge.net/projects/pywin32/    
+ 4. lxml 설치 : http://lxml.de/installation.html#installation
+ 5. pyOpenSSL 설치 : https://pypi.python.org/pypi/pyOpenSSL
+ 6. Scrapy 설치 : http://doc.scrapy.org/en/latest/intro/install.html#installing-scrapy
+=> webdriver를 이용하는 scrapy사용을 위한 셋팅
+ 7. BeautifulSoup4 설치 : pip install BeautifulSoup4
+ 8. cloudflare 설치 : pip install cfscrape
+ 9. google api 설치 : 
+    pip install --upgrade google-api-python-client 
+    pip install --upgrade google-auth google-auth-oauthlib google-auth-httplib2
+
+ ※ 참조
+ - http://uslifelog.tistory.com/27
+ - http://xn073.tistory.com/entry/%ED%81%AC%EB%A1%A4%EB%A7%81%EC%9D%84-%ED%95%B4%EB%B3%B4%EA%B8%B0-%EC%9C%84%ED%95%9C-scrapy-%EC%84%A4%EC%B9%98
+
+Selenium 설치
+
+ - python이 설치되어 pip이 있다면 cmd를 실행하여 'pip install selenium'을 치시면 설치가 자동으로 됩니다.
+
+Chromedriver Download
+
+ - 아래 사이트에서 ChromeDriver.exe를 다운 받으셔서 소스코드가 있는 폴더에 넣어주세요.
+ - https://sites.google.com/a/chromium.org/chromedriver/downloads
+
+================================================================================================================================================

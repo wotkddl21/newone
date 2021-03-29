@@ -1,0 +1,1760 @@
+argv[1] :물통
+Community 물통 crawling start.
+Multi-Process : 1
+"물통" list crawling start from Ruliweb.
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+   통합검색 | 루리웹
+  </title>
+  <link href="https://bbs.ruliweb.com/search" rel="canonical"/>
+  <link href="https://m.ruliweb.com/search" media="only screen and (max-width: 640px)" rel="alternate"/>
+  <meta content="width=1159" name="viewport"/>
+  <meta content="l6x3iJcAJcYHUmgeJzx1vE-N8c71Y_RPsn0TWmMyLCo" name="google-site-verification"/>
+  <meta charset="utf-8"/>
+  <meta content="origin" name="Referrer"/>
+  <meta content="text/javascript" http-equiv="Content-Script-Type"/>
+  <meta content="text/css" http-equiv="Content-Style-Type"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="no" http-equiv="imagetoolbar"/>
+  <meta content="#1A70DC" name="theme-color"/>
+  <meta content="kr" name="content-language"/>
+  <meta content="루리웹" name="author"/>
+  <meta content="통합검색 | 루리웹" name="title"/>
+  <meta content="들어올 땐 마음대로인 루리웹 메인으로 들어오도록 해" name="description"/>
+  <meta content="https://img.ruliweb.com/img/2016/ruli_400x210.png" name="thumbnail"/>
+  <meta content="website" property="og:type"/>
+  <meta content="통합검색 | 루리웹" property="og:title"/>
+  <meta content="루리웹" property="og:site_name"/>
+  <meta content="들어올 땐 마음대로인 루리웹 메인으로 들어오도록 해" property="og:description"/>
+  <meta content="https://img.ruliweb.com/img/2016/ruli_400x210.png" property="og:image"/>
+  <meta content="ko_KR" property="og:locale"/>
+  <meta content="https://bbs.ruliweb.com/search?q=%EB%AC%BC%ED%86%B5&amp;c_page=1" property="og:url"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <link href="/OpenSearch.xml" rel="search" title="루리웹" type="application/opensearchdescription+xml"/>
+  <link href="/assets/manifest.json" rel="manifest"/>
+  <link href="/assets/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="/assets/css/style.min.css?version=1582" rel="stylesheet"/>
+  <link href="/favicon.ico" rel="shortcut icon"/>
+  <link href="https://img.ruliweb.com/img/2016/icon/ruliweb_icon_144_144.png" rel="icon"/>
+  <link href="https://img.ruliweb.com/img/2016/icon/ruliweb_icon_144_144.png" rel="apple-touch-icon"/>
+  <script async="async" src="//img.ruliweb.com/js/criteo.publishertag.js?v=2" type="text/javascript">
+  </script>
+  <script async="" src="https://cdn.hbplatform.com/adop/tags/2/1005/adop.js">
+  </script>
+  <script src="/assets/js/core.min.js?version=1705" type="text/javascript">
+  </script>
+ </head>
+ <body class="default">
+  <script>
+   var isIpadOs = navigator.userAgent.toLowerCase().indexOf('macintosh') > -1 && 'ontouchend' in document;
+	// alert(navigator.userAgent);
+	if(isIpadOs) {
+		document.querySelector('body').classList.add('mobiledevice');
+	}
+	var current = app.get_cookie('page_mode');
+	var theme_OS = window.matchMedia('(prefers-color-scheme: dark)');
+	if(current === 'dark_mode' || (current === '' && theme_OS.matches)) {
+		if(document.querySelector('body')) {
+			document.querySelector('body').classList.add('dark_mode');
+		}
+	}
+	try{
+		theme_OS.addEventListener('change', function(e){
+			console.log(e, 'mode_test')
+			var current = app.get_cookie('page_mode');
+			if(current !== '') {
+				return;
+			}
+			document.querySelector('img.ruliweb_icon').style.display = 'none'
+			if(e.matches) {
+				//dark mode
+				document.querySelector('#page_mode_icon').classList.remove('icon-sun');
+				document.querySelector('#page_mode_icon').classList.add('icon-moon');
+				document.querySelector('img.ruliweb_icon').src = '//img.ruliweb.com/img/2016/common/ruliweb_bi_classic.png'
+			}else {
+				//light mode
+				document.querySelector('#page_mode_icon').classList.remove('icon-moon');
+				document.querySelector('#page_mode_icon').classList.add('icon-sun');
+				document.querySelector('img.ruliweb_icon').src = '//img.ruliweb.com/img/2016/common/ruliweb_bi.png'				
+			}
+			document.querySelector('body').classList.remove((e.matches) ? 'light_mode' : 'dark_mode');
+			document.querySelector('body').classList.add((e.matches) ? 'dark_mode' : 'light_mode');
+		})
+	} catch(e){
+		try{
+			theme_OS.addListener(function(e){
+				var current = app.get_cookie('page_mode');
+				if(current !== '') {
+					return;
+				}
+				document.querySelector('img.ruliweb_icon').style.display = 'none'
+				if(e.matches) {
+					//dark mode
+					document.querySelector('#page_mode_icon').classList.remove('icon-sun');
+					document.querySelector('#page_mode_icon').classList.add('icon-moon');
+					document.querySelector('img.ruliweb_icon').src = '//img.ruliweb.com/img/2016/common/ruliweb_bi_classic.png'					
+				}else {
+					//light mode
+					document.querySelector('#page_mode_icon').classList.remove('icon-moon');
+					document.querySelector('#page_mode_icon').classList.add('icon-sun');
+					document.querySelector('img.ruliweb_icon').src = '//img.ruliweb.com/img/2016/common/ruliweb_bi.png'
+				}
+				document.querySelector('body').classList.remove((e.matches) ? 'light_mode' : 'dark_mode');
+				document.querySelector('body').classList.add((e.matches) ? 'dark_mode' : 'light_mode');
+			})
+		}catch(ee){
+			console.error(ee);
+		}
+	}
+  </script>
+  <header class="type_1" id="header">
+   <noscript>
+    <p class="row" style="font-size: 16px; color: #000; text-align: center; border: 2px solid #f00; box-sizing: border-box;">
+     <br/>
+     <strong style="color: #f00; font-size: 20px;">
+      주의 !
+     </strong>
+     <br/>
+     귀하가 사용하고 계신 브라우저는 스크립트를 지원하고 있지 않아서, 레이아웃 및 컨텐츠가 정상적으로 동작 하지 않을 수 있습니다. 스크립트 기능을 활성화 하시길 권장합니다.
+     <br/>
+     <br/>
+    </p>
+   </noscript>
+   <div class="gnb_wrapper max_width_outer">
+    <div class="row">
+     <div class="logo max_width_inner col col_12">
+      <a class="col block" href="https://www.ruliweb.com" style="height:40px;">
+       <img alt="루리웹" class="ruliweb_icon" src="https://img.ruliweb.com/img/2016/common/ruliweb_bi.png" style="height:40px;"/>
+      </a>
+      <div class="header_search_wrapper col col_7">
+       <form action="https://bbs.ruliweb.com/search" method="get">
+        <input autocomplete="off" class="btn_search col col_6" id="search" name="q" type="text" value=""/>
+        <button class="btn_ruli_dark no_box_shadow col" style="padding: 4px 7px; width:130px; " type="submit">
+         검색 / 게시판 찾기
+        </button>
+       </form>
+      </div>
+      <div class="mini">
+       <ul class="link_list">
+        <li class="col">
+         <a class="link" href="https://mypi.ruliweb.com">
+          마이피
+         </a>
+        </li>
+        <li class="col">
+         <span class="dot">
+          ·
+         </span>
+        </li>
+        <li class="col">
+         <a class="link" href="https://bbs.ruliweb.com/market">
+          중고장터
+         </a>
+        </li>
+        <li class="col">
+        </li>
+        <li>
+         <div class="head_btn_wrapper">
+          <a class="head_btn member" href="https://user.ruliweb.com/member/login">
+           <i class="icon-off">
+           </i>
+           로그인
+          </a>
+          <a class="head_btn page_mode" href="javascript:app.toggle_page_mode();" title="다크 모드">
+           <i class="icon-moon" id="page_mode_icon" style="width: 20px; vertical-align: middle;">
+           </i>
+          </a>
+          <span id="quickmenu_button">
+           <a class="head_btn quickmenu" href="javascript:app.quickmenu();" title="퀵메뉴">
+            <i class="icon-th" style="font-size:16px">
+            </i>
+            퀵메뉴
+           </a>
+          </span>
+         </div>
+        </li>
+        <input id="site_mod" type="hidden" value="bbs_3"/>
+       </ul>
+      </div>
+     </div>
+     <!--googleoff: snippet-->
+     <div class="menu_wrapper max_width_inner col col_12">
+      <div class="menu_background max_width_outer">
+      </div>
+      <nav class="menu">
+       <h2 class="screenout">
+        GNB 메뉴
+       </h2>
+       <ul id="gnb_menu_list">
+        <li class="menu_item text_over">
+         <h3>
+          <a class="text_center" href="https://bbs.ruliweb.com/ps">
+           PS4/5
+          </a>
+         </h3>
+        </li>
+        <li class="menu_item text_over">
+         <h3>
+          <a class="text_center" href="https://bbs.ruliweb.com/nin">
+           SWITCH
+          </a>
+         </h3>
+        </li>
+        <li class="menu_item text_over">
+         <h3>
+          <a class="text_center" href="https://bbs.ruliweb.com/xbox">
+           XBO/SX
+          </a>
+         </h3>
+        </li>
+        <li class="menu_item text_over">
+         <h3>
+          <a class="text_center" href="https://bbs.ruliweb.com/pc">
+           PC
+          </a>
+         </h3>
+        </li>
+        <li class="menu_item text_over">
+         <h3>
+          <a class="text_center" href="https://bbs.ruliweb.com/mobile">
+           모바일
+          </a>
+         </h3>
+        </li>
+        <li class="menu_item text_over">
+         <h3>
+          <a class="text_center" href="https://bbs.ruliweb.com/family/249">
+           AC/고전
+          </a>
+         </h3>
+        </li>
+        <li>
+         <div class="icon_line">
+         </div>
+        </li>
+        <li class="menu_item text_over">
+         <h3>
+          <a class="text_center" href="https://bbs.ruliweb.com/news">
+           뉴스
+          </a>
+         </h3>
+        </li>
+        <li class="menu_item text_over">
+         <h3>
+          <a class="text_center" href="https://bbs.ruliweb.com/hobby">
+           취미갤
+          </a>
+         </h3>
+        </li>
+        <li class="menu_item text_over">
+         <h3>
+          <a class="text_center" href="https://bbs.ruliweb.com/market/board/1020">
+           핫딜
+          </a>
+         </h3>
+        </li>
+        <li class="menu_item text_over">
+         <h3>
+          <a class="text_center" href="https://bbs.ruliweb.com/community">
+           커뮤니티
+          </a>
+         </h3>
+        </li>
+        <li>
+         <div class="icon_line">
+         </div>
+        </li>
+        <li class="menu_item text_over">
+         <h3>
+          <a class="text_center special" href="https://bbs.ruliweb.com/best">
+           BEST
+          </a>
+         </h3>
+        </li>
+        <li class="menu_item text_over">
+         <h3>
+          <a class="text_center special" href="https://bbs.ruliweb.com/game/search">
+           게임 찾기
+          </a>
+         </h3>
+        </li>
+        <li>
+         <div class="icon_line">
+         </div>
+        </li>
+        <li class="menu_item text_over">
+         <h3>
+          <a class="text_center" href="https://bbs.ruliweb.com/family/212">
+           만화
+          </a>
+         </h3>
+        </li>
+        <li class="menu_item text_over">
+         <h3>
+          <a class="text_center" href="https://bbs.ruliweb.com/family/242">
+           피규어
+          </a>
+         </h3>
+        </li>
+        <li class="menu_item text_over">
+         <h3>
+          <a class="text_center" href="https://bbs.ruliweb.com/family/232">
+           프라
+          </a>
+         </h3>
+        </li>
+        <li class="menu_item text_over">
+         <h3>
+          <a class="text_center" href="https://bbs.ruliweb.com/family/211">
+           애니/책
+          </a>
+         </h3>
+        </li>
+        <li>
+         <div class="icon_line">
+         </div>
+        </li>
+        <li class="menu_item text_over">
+         <h3>
+          <a class="text_center special" href="https://bbs.ruliweb.com/community/board/320211" style="width:85px; background:#adabab;">
+           MAXIM
+          </a>
+         </h3>
+        </li>
+       </ul>
+       <div class="family">
+        <div class="family_text">
+         <span>
+          패밀리 사이트
+         </span>
+         <span class="icon_angle">
+          ∨
+         </span>
+        </div>
+        <div class="family_list_wrapper family_page_max_3">
+         <div class="row">
+          <ul class="family_list col">
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/5214">
+              <img alt="사이버펑크2077" class="item_img col" src="//img.ruliweb.com/mgb/20/10/23/175533ce466_mboiph.png" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               사이버펑크2077
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/4948">
+              <img alt="레드 데드 리뎀션2" class="item_img col" src="//img.ruliweb.com/mgb/18/10/27/166b3ef9e32_mniqwa.png" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               레드 데드 리뎀션2
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/4659">
+              <img alt="로스트 아크" class="item_img col" src="//i2.ruliweb.com/img/icon/163cfc83e94_fekbow.png" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               로스트 아크
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/5042">
+              <img alt="에이펙스 레전드" class="item_img col" src="//img.ruliweb.com/mgb/19/02/26/16928329cc9_koswic.jpg" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               에이펙스 레전드
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/492">
+              <img alt="디비전2" class="item_img col" src="//cmg.ruliweb.com/bt/18/06/12/163f14c4007_feqhru.jpg" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               디비전2
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/5076">
+              <img alt="패스 오브 엑자일" class="item_img col" src="//img.ruliweb.com/mgb/19/09/04/16cfb56420f_xapgwy.png" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               패스 오브 엑자일
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/2086">
+              <img alt="디아블로 " class="item_img col" src="//cmg.ruliweb.com/family/icon/4E5B6F800450D00001" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               디아블로
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/4979">
+              <img alt="폴아웃76" class="item_img col" src="//img.ruliweb.com/mgb/18/11/05/166e1d89b48_nhwtqp.png" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               폴아웃76
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/5224">
+              <img alt="PS파트너샵+" class="item_img col" src="" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               PS파트너샵+
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/4526">
+              <img alt="리그 오브 레전드" class="item_img col" src="//cmg.ruliweb.com/family/icon/5466F4730214020001" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               리그 오브 레전드
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/4383">
+              <img alt="데스티니 가디언즈" class="item_img col" src="//cmg.ruliweb.com/bt/17/09/23/15eaeec5c4e_mucykg.png" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               데스티니 가디언즈
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/4442">
+              <img alt="몬스터 헌터" class="item_img col" src="//i1.ruliweb.com/img/family/4E3216A00336FD0001" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               몬스터 헌터
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/3110">
+              <img alt="하스스톤" class="item_img col" src="//i2.ruliweb.com/img/icon/163c666dff2_naoypz.png" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               하스스톤
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/4454">
+              <img alt="WOW" class="item_img col" src="//i2.ruliweb.com/img/icon/163c66608d3_cozvsa.png" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               WOW
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/4527">
+              <img alt="히오스" class="item_img col" src="//i2.ruliweb.com/img/icon/163caed0a02_oyzvfq.gif" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               히오스
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/4916">
+              <img alt="콜오브듀티" class="item_img col" src="//img.ruliweb.com/family/icon/4E321B0D034AAD0001" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               콜오브듀티
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/1476">
+              <img alt="오버워치" class="item_img col" src="//i2.ruliweb.com/img/icon/163c667208c_yesdfa.png" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               오버워치
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/493">
+              <img alt="소울워커" class="item_img col" src="//i2.ruliweb.com/img/icon/163c6675c4c_wfacjy.png" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               소울워커
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/4382">
+              <img alt="소녀전선" class="item_img col" src="//i2.ruliweb.com/img/icon/15eaeeca5cc_hgfsyd.png" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               소녀전선
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/4653">
+              <img alt="검은사막" class="item_img col" src="//cmg.ruliweb.com/family/icon/5481411A04045D0002" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               검은사막
+              </span>
+             </a>
+            </div>
+           </li>
+          </ul>
+          <ul class="family_list col">
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/4941">
+              <img alt="미니막스" class="item_img col" src="//img.ruliweb.com/mgb/18/10/26/166b00c7350_puafhq.png" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               미니막스
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/5070">
+              <img alt="마이아케이드" class="item_img col" src="//img.ruliweb.com/mgb/19/09/16/16d38cbb8d0_bnpmlw.png" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               마이아케이드
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/4749">
+              <img alt="피파온라인4" class="item_img col" src="//i2.ruliweb.com/img/icon/163d60928f2_vfnikw.png" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               피파온라인4
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/4773">
+              <img alt="메이플스토리" class="item_img col" src="//cmg.ruliweb.com/bt/18/06/07/163d6071b3b_eaznfu.png" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               메이플스토리
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/4804">
+              <img alt="월드 오브 워쉽" class="item_img col" src="//i3.ruliweb.com/img/icon/163d605e947_fklduv.png" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               월드 오브 워쉽
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/4805">
+              <img alt="월드 오브 탱크" class="item_img col" src="//i3.ruliweb.com/img/icon/163d604d296_jwazlb.png" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               월드 오브 탱크
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/4853">
+              <img alt="마비노기 영웅전" class="item_img col" src="//cmg.ruliweb.com/bt/18/06/09/163e2f945f6_qmtxoy.png" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               마비노기 영웅전
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/4892">
+              <img alt="다크 소울 " class="item_img col" src="//cmg.ruliweb.com/family/icon/50222ED20160EF0002" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               다크 소울
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/4384">
+              <img alt="배틀그라운드" class="item_img col" src="//i3.ruliweb.com/img/icon/15ea841a68c_nmfsvc.png" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               배틀그라운드
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/496">
+              <img alt="던전 앤 파이터" class="item_img col" src="//i1.ruliweb.com/img/family/4E321A5D0606F30002" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               던전 앤 파이터
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/3094">
+              <img alt="러브 라이브 " class="item_img col" src="//i1.ruliweb.com/img/family/51F9C9C50316B30001" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               러브 라이브
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/3518">
+              <img alt="아이돌 마스터" class="item_img col" src="//i1.ruliweb.com/img/family/537C2D150213E90001" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               아이돌 마스터
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/515">
+              <img alt="포켓 몬스터" class="item_img col" src="//img.ruliweb.com/family/icon/4E3216360437940002" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               포켓 몬스터
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/500">
+              <img alt="그란 투리스모" class="item_img col" src="//img.ruliweb.com/family/icon/4E32197F056A120001" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               그란 투리스모
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/511">
+              <img alt="슈퍼로봇 시리즈" class="item_img col" src="//img.ruliweb.com/family/icon/4E321673063B800001" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               슈퍼로봇 시리즈
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/516">
+              <img alt="테일즈 시리즈" class="item_img col" src="//img.ruliweb.com/family/icon/54C0A486046A360001" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               테일즈 시리즈
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/508">
+              <img alt="캡콤 게임" class="item_img col" src="//img.ruliweb.com/bt/17/09/22/15ea8417318_sfryju.png" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               캡콤 게임
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/514">
+              <img alt="파이널 판타지" class="item_img col" src="//img.ruliweb.com/family/icon/4E321643063B9E0001" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               파이널 판타지
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/510">
+              <img alt="무쌍 시리즈" class="item_img col" src="//img.ruliweb.com/family/icon/4E3216820313050002" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               무쌍 시리즈
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/1859">
+              <img alt="판타지스타 온라인2" class="item_img col" src="//img.ruliweb.com/family/icon/50222EBA033FA10001" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               판타지스타 온라인2
+              </span>
+             </a>
+            </div>
+           </li>
+          </ul>
+          <ul class="family_list col">
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/507">
+              <img alt="메탈기어 솔리드" class="item_img col" src="//img.ruliweb.com/family/icon/4E3216AE0566360001" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               메탈기어 솔리드
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/504">
+              <img alt="드래곤 볼" class="item_img col" src="//img.ruliweb.com/family/icon/4E3219E701074B0002" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               드래곤 볼
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/503">
+              <img alt="동물의 숲" class="item_img col" src="//img.ruliweb.com/family/icon/4E3219DD052BFA0003" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               동물의 숲
+              </span>
+             </a>
+            </div>
+           </li>
+           <li class="family_item">
+            <div class="row">
+             <a class="link_site deco" href="https://bbs.ruliweb.com/family/5116">
+              <img alt="젠지 이스포츠" class="item_img col" src="//img.ruliweb.com/mgb/20/01/31/16ffa4d9be5_lveqbh.png" style="width:20px;height:20px;"/>
+              <span class="item_name col">
+               젠지 이스포츠
+              </span>
+             </a>
+            </div>
+           </li>
+          </ul>
+         </div>
+        </div>
+       </div>
+      </nav>
+     </div>
+     <!--googleon: snippet-->
+    </div>
+   </div>
+  </header>
+  <div class="ad_back_wrapper">
+   <div class="max_width_outer relative">
+    <div class="adddd_1920_1080 ad_background" style="width:1920px;min-height:1080px;position: absolute;left: -267px;margin: 0;">
+     <div style="width:100%;height:100%;">
+      <script src="//image.ruliweb.com/view/view.js?zoneid=52">
+      </script>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="max_width_outer" id="main">
+   <!--googleoff: snippet-->
+   <div class="side_wrapper">
+    <div id="left_side">
+    </div>
+    <aside class="aside_best" id="mAside" style="display:none;">
+     <h2 class="screen_out">
+      루리웹 인증 BEST 메뉴
+     </h2>
+     <div class="right_border">
+     </div>
+     <div class="right_side_wrapper side_fixed">
+      <div id="right_visited_game_board">
+      </div>
+      <div class="section_list">
+       <div class="search_hot_list_data" style="display:none;">
+        [{"keyword":"\uc6d0\uc2e0","rank":0},{"keyword":"@","rank":0},{"keyword":"\ub77c\uc624","rank":0},{"keyword":"\ud504\ub9ac\ucf54\ub124","rank":0},{"keyword":"\uc18c\uc6b8\uc6cc\ucee4","rank":1},{"keyword":"\ubc31\uc2e0","rank":4},{"keyword":"\ud658\ubd88","rank":-2},{"keyword":"\uac00\ud14c","rank":0},{"keyword":"\uc18c\uc6cc","rank":0},{"keyword":"\uc0ac\ud391","rank":-3},{"keyword":"\uc601\uad6d","rank":7},{"keyword":"\uc815\uc740\uacbd","rank":"new"},{"keyword":"\ub098\uacbd\uc6d0","rank":-2},{"keyword":"\uc0ac\ud3912077","rank":"new"},{"keyword":"\uc5d0\ud53d","rank":-2},{"keyword":"\ud788\ub85c\uc544\uce74","rank":"new"},{"keyword":"ps5","rank":-2},{"keyword":"\uc0ac\uc774\ubc84\ud391\ud06c","rank":-4},{"keyword":"\uc138\uc544","rank":1},{"keyword":"\uc5b4\ub290 \ub9dd\ud574\uac00\ub294 \uac8c\uc784\uc758 \uc9c4\uc785\uc7a5\ubcbd","rank":-3},{"keyword":"\uc6cc\ud574\uba38","rank":1},{"keyword":"\ub4dc\ub798\uace4\ubcfc","rank":"new"}]
+       </div>
+       <div class="right_best widget" id="right_best">
+        <div class="right_best_top_area row">
+        </div>
+        <a href="//bbs.ruliweb.com/best/hit_history">
+         <img class="margin_top" src="https://img.ruliweb.com/img/2016/common/right_best.png"/>
+        </a>
+        <ul class="right_best_list">
+         <li class="right_best_list_item">
+          <a class="txt_link" href="https://bbs.ruliweb.com/hobby/board/300083/read/30565906">
+           <strong>
+            종이 90년대 서울 시내버스
+           </strong>
+          </a>
+         </li>
+         <li class="right_best_list_item">
+          <a class="txt_link" href="https://bbs.ruliweb.com/hobby/board/300117/read/30626342">
+           코로나 시대 집밥 해먹기
+          </a>
+         </li>
+         <li class="right_best_list_item">
+          <a class="txt_link" href="https://bbs.ruliweb.com/hobby/board/300117/read/30626358">
+           UFO 버거 먹어봤습니다
+          </a>
+         </li>
+         <li class="right_best_list_item">
+          <a class="txt_link" href="https://bbs.ruliweb.com/hobby/board/300116/read/30562612">
+           <strong>
+            드디어 원룸에서 벗어났습니다
+           </strong>
+          </a>
+         </li>
+         <li class="right_best_list_item">
+          <a class="txt_link" href="https://bbs.ruliweb.com/hobby/board/300087/read/30588213">
+           던만추 비네의 첫장면
+          </a>
+         </li>
+         <li class="right_best_list_item">
+          <a class="txt_link" href="https://bbs.ruliweb.com/family/212/board/300064/read/30629595">
+           라스트오리진 컴패니언 만화 모음
+          </a>
+         </li>
+         <li class="right_best_list_item">
+          <a class="txt_link" href="https://bbs.ruliweb.com/hobby/board/320043/read/369243">
+           <strong>
+            족저근막염 예방 비법
+           </strong>
+          </a>
+         </li>
+         <li class="right_best_list_item">
+          <a class="txt_link" href="https://bbs.ruliweb.com/hobby/board/300117/read/30626326">
+           배달 시켜 먹은 원할머니 보쌈
+          </a>
+         </li>
+         <li class="right_best_list_item">
+          <a class="txt_link" href="https://bbs.ruliweb.com/hobby/board/300118/read/30563732">
+           레고 21313 병속의 배
+          </a>
+         </li>
+         <li class="right_best_list_item">
+          <a class="txt_link" href="https://bbs.ruliweb.com/hobby/board/300082/read/30591918">
+           <strong>
+            볼가이 홀리데이 스페셜
+           </strong>
+          </a>
+         </li>
+         <li class="right_best_list_item">
+          <a class="txt_link" href="https://bbs.ruliweb.com/hobby/board/300082/read/30591891">
+           MG 더블제타 건담 픽스도색
+          </a>
+         </li>
+         <li class="right_best_list_item">
+          <a class="txt_link" href="https://bbs.ruliweb.com/hobby/board/300082/read/30591930">
+           윙건담 버카 LED
+          </a>
+         </li>
+         <li class="right_best_list_item">
+          <a class="txt_link" href="https://bbs.ruliweb.com/hobby/board/300082/read/30591852">
+           <strong>
+            RG 수집 완료, 그 긴 여정
+           </strong>
+          </a>
+         </li>
+         <li class="right_best_list_item">
+          <a class="txt_link" href="https://bbs.ruliweb.com/hobby/board/300117/read/30626375">
+           먹는게 남는 시국먹방
+          </a>
+         </li>
+         <li class="right_best_list_item">
+          <a class="txt_link" href="https://bbs.ruliweb.com/hobby/board/300117/read/30626177">
+           부산 전포동 야스마루, 알로
+          </a>
+         </li>
+         <li class="right_best_list_item">
+          <a class="txt_link" href="https://bbs.ruliweb.com/news/board/17/read/123">
+           <strong>
+            [스토리] 데빌 메이 크라이
+           </strong>
+          </a>
+         </li>
+         <li class="right_best_list_item">
+          <a class="txt_link" href="https://bbs.ruliweb.com/news/board/11/read/1909">
+           선택과 집중으로 만든 차별성
+          </a>
+         </li>
+         <li class="right_best_list_item">
+          <a class="txt_link" href="https://bbs.ruliweb.com/news/board/11/read/1906">
+           스위치로 돌아온 닌텐도식 RTS
+          </a>
+         </li>
+         <li class="right_best_list_item">
+          <a class="txt_link" href="https://bbs.ruliweb.com/news/board/11/read/1907">
+           <strong>
+            평범함과 단조로움으로 마감된
+           </strong>
+          </a>
+         </li>
+         <li class="right_best_list_item">
+          <a class="txt_link" href="https://www.rulimate.com/" target="_blank">
+           [인터넷 가입]
+          </a>
+         </li>
+         <li class="right_best_list_item">
+          <a class="txt_link" href="https://www.kr.playblackdesert.com/main/index?ADcampaign=6th&amp;ADSource=ruliweb_pc&amp;ADTrackerName=201203&amp;ADMedium=rightbest&amp;ADContent=rightbest#utm_campaign=6th&amp;utm_source=ruliweb_pc&amp;utm_term=201203&amp;utm_medium=rightbest&amp;utm_content=rightbest" target="_blank">
+           [검은사막] 6주년 감사 이벤트 시작!
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="adrrr ad_200_400" id="ad_sub_top_06" style="width:200px;min-height:400px;">
+       <div class="ad" style="height:200px; margin:0">
+        <script src="//image.ruliweb.com/view/view.js?zoneid=47">
+        </script>
+       </div>
+      </div>
+      <br/>
+     </div>
+    </aside>
+   </div>
+   <!--googleon: snippet-->
+   <h2 class="screen_out">
+    본문
+   </h2>
+   <div class="main_content_area default" id="">
+    <div class="main_content_area" id="search_main">
+     <div class="ti_wrapper_relpace screen_out">
+      <div class="adrrr ad_1150_250" id="ad_sub_top_01" style="width:1150px;min-height:250px;">
+       <div class="ad" style="height:250px; margin:0">
+        <script src="//image.ruliweb.com/view/view.js?denyid=1258&amp;zoneid=57">
+        </script>
+       </div>
+      </div>
+     </div>
+     <div class="ti_wrapper screen_out" data-name="cfa5">
+      <div class="adrrr ad_1165_380" id="ad_main_ti_new" style="">
+       <div class="ad" style="background:#808080;padding-top: 1px;padding-bottom: 1px; height:380px; margin:0">
+        <script src="//image.ruliweb.com/view/view.js?zoneid=64">
+        </script>
+       </div>
+      </div>
+     </div>
+     <div class="row">
+      <div class="box">
+       <form action="https://bbs.ruliweb.com/search" method="get" name="board_search">
+        <input autocomplete="off" class="line_h_39 col col_11 text_left text_large border_box search_input" id="search_bar" name="q" type="text" value="물통"/>
+        <input name="type" type="hidden" value=""/>
+        <button class="btn_ruli_dark col col_1 line_h_39 padding_none border_none" type="submit">
+         <i class="icon-search text_large">
+         </i>
+        </button>
+       </form>
+       <div class="row tab_wrapper" id="tab_wrapper">
+        <div class="col margin_w_10 tab active" id="tab_total" onclick="app.searchMode('total_search')">
+         통합검색
+        </div>
+        <div class="col margin_w_10 tab" id="tab_news" onclick="app.searchMode('news_search')">
+         뉴스
+        </div>
+        <div class="col margin_w_10 tab" id="tab_board" onclick="app.searchMode('board_search')">
+         게시글
+        </div>
+        <div class="col margin_w_10 tab" id="tab_comment" onclick="app.searchMode('comment_search')">
+         댓글
+        </div>
+        <div class="col margin_w_10 tab" id="tab_mypi" onclick="app.searchMode('mypi_search')">
+         마이피
+        </div>
+       </div>
+       <div class="row">
+        <div class="text_center" id="queries">
+         인기검색어
+         <a class="hot_query" href="https://bbs.ruliweb.com/search?q=원신">
+          원신
+         </a>
+         <a class="hot_query" href="https://bbs.ruliweb.com/search?q=@">
+          @
+         </a>
+         <a class="hot_query" href="https://bbs.ruliweb.com/search?q=라오">
+          라오
+         </a>
+         <a class="hot_query" href="https://bbs.ruliweb.com/search?q=프리코네">
+          프리코네
+         </a>
+         <a class="hot_query" href="https://bbs.ruliweb.com/search?q=소울워커">
+          소울워커
+         </a>
+         <a class="hot_query" href="https://bbs.ruliweb.com/search?q=백신">
+          백신
+         </a>
+         <a class="hot_query" href="https://bbs.ruliweb.com/search?q=환불">
+          환불
+         </a>
+         <a class="hot_query" href="https://bbs.ruliweb.com/search?q=가테">
+          가테
+         </a>
+         <a class="hot_query" href="https://bbs.ruliweb.com/search?q=소워">
+          소워
+         </a>
+         <a class="hot_query" href="https://bbs.ruliweb.com/search?q=사펑">
+          사펑
+         </a>
+         <a class="hot_query" href="https://bbs.ruliweb.com/search?q=영국">
+          영국
+         </a>
+         <a class="hot_query" href="https://bbs.ruliweb.com/search?q=정은경">
+          정은경
+         </a>
+         <a class="hot_query" href="https://bbs.ruliweb.com/search?q=나경원">
+          나경원
+         </a>
+         <a class="hot_query" href="https://bbs.ruliweb.com/search?q=사펑2077">
+          사펑2077
+         </a>
+         <a class="hot_query" href="https://bbs.ruliweb.com/search?q=에픽">
+          에픽
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="row relative">
+      <div class="col mcol_12" id="bbs_game_result">
+       <div class="box text_center text_xlarge padding_h_10">
+        <a class="" href="https://bbs.ruliweb.com/game/apply" target="_self">
+         <strong>
+          게시판 신청
+          <i class="icon-angle-right" style="font-size: 20px;">
+          </i>
+         </strong>
+        </a>
+       </div>
+       <div class="box">
+        <div class="search_result_wrapper" id="board_name">
+         <div class="search_result">
+          <div class="search_result_title">
+           일반 게시판
+           <span class="empty_result text_good text_center">
+            결과 없음
+           </span>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="box">
+        <div class="search_result_wrapper" id="game_search">
+         <div class="search_result">
+          <div class="search_result_title">
+           게임 게시판
+           <span class="empty_result text_good text_center">
+            결과 없음
+           </span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="r_col mcol_12" id="total_search_result">
+       <div class="nbp_container default">
+       </div>
+       <div class="row">
+        <div class="result box">
+         <div class="search_result_wrapper" id="news_search">
+          <div class="search_result">
+           <div class="search_result_title">
+            뉴스
+            <span class="empty_result text_good text_center">
+             결과 없음
+            </span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="result box">
+         <div class="search_result_wrapper" id="board_search">
+          <div class="search_result">
+           <div class="search_result_title">
+            게시글
+            <span class="empty_result text_good text_center">
+             결과 없음
+            </span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="result box">
+         <div class="search_result_wrapper" id="comment_search">
+          <div class="search_result">
+           <div class="search_result_title">
+            댓글
+            <span class="empty_result text_good text_center">
+             결과 없음
+            </span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="result box">
+         <div class="search_result_wrapper" id="mypi_search">
+          <div class="search_result">
+           <div class="search_result_title">
+            마이피
+            <span class="empty_result text_good text_center">
+             결과 없음
+            </span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="box">
+         <div class="gcse_result_wrapper" id="gsc_search">
+          <div class="row">
+           <div class="search_result_title">
+            구글 맞춤 검색
+           </div>
+           <script>
+            (function() {
+								var cx = 'partner-pub-5481281240685691:3754453350';
+								var gcse = document.createElement('script');
+								gcse.type = 'text/javascript';
+								gcse.async = true;
+								gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+								var s = document.getElementsByTagName('script')[0];
+								s.parentNode.insertBefore(gcse, s);
+							})();
+           </script>
+           <gcse:search>
+           </gcse:search>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!--googleoff: all-->
+  <footer class="max_width_outer" id="footer">
+   <div class="aticle_background">
+   </div>
+   <div class="family_background">
+   </div>
+   <div class="max_width_outer relative">
+    <div class="max_width_inner" style="height:275px;">
+     <div class="row">
+      <div class="col col_6">
+       <h3 class="title" style="height: 52px;font-size: 14px; line-height: 52px;">
+        게시판 인기 순위
+       </h3>
+       <br/>
+       <div class="row aticle_wrapper">
+        <ul class="col col_4">
+         <li class="title">
+          <strong>
+           게임
+          </strong>
+          <br/>
+          <br/>
+         </li>
+         <li class="item">
+          <a href="https://bbs.ruliweb.com/game/84786">
+           사이버펑크 2077
+          </a>
+         </li>
+         <li class="item">
+          <a href="https://bbs.ruliweb.com/game/9995">
+           리그 오브 레전드
+          </a>
+         </li>
+         <li class="item">
+          <a href="https://bbs.ruliweb.com/game/85472">
+           위닝 일레븐 공략게시판
+          </a>
+         </li>
+         <li class="item">
+          <a href="https://bbs.ruliweb.com/game/2230">
+           던전 앤 파이터
+          </a>
+         </li>
+         <li class="item">
+          <a href="https://bbs.ruliweb.com/game/84778">
+           더 디비전2
+          </a>
+         </li>
+         <li class="item">
+          <a href="https://bbs.ruliweb.com/game/83787">
+           다크 소울 3
+          </a>
+         </li>
+         <li class="item">
+          <a href="https://bbs.ruliweb.com/game/83706">
+           타입문-페그오
+          </a>
+         </li>
+        </ul>
+        <ul class="col col_4">
+         <li class="title">
+          <strong>
+           갤러리
+          </strong>
+          <br/>
+          <br/>
+         </li>
+         <li class="item">
+          <a href="https://bbs.ruliweb.com/hobby/board/300117">
+           음식 갤러리
+          </a>
+         </li>
+         <li class="item">
+          <a href="https://bbs.ruliweb.com/hobby/board/300537">
+           콘솔 영상
+          </a>
+         </li>
+         <li class="item">
+          <a href="https://bbs.ruliweb.com/hobby/board/300087">
+           피규어 갤러리
+          </a>
+         </li>
+         <li class="item">
+          <a href="https://bbs.ruliweb.com/hobby/board/300082">
+           프라모델 캐릭터모형 갤러리
+          </a>
+         </li>
+         <li class="item">
+          <a href="https://bbs.ruliweb.com/hobby/board/300539">
+           PC패키지 영상
+          </a>
+         </li>
+         <li class="item">
+          <a href="https://bbs.ruliweb.com/hobby/board/300540">
+           모바일 영상
+          </a>
+         </li>
+         <li class="item">
+          <a href="https://bbs.ruliweb.com/hobby/board/300104">
+           반려동물 갤러리
+          </a>
+         </li>
+        </ul>
+        <ul class="col col_4">
+         <li class="title">
+          <strong>
+           커뮤니티
+          </strong>
+          <br/>
+          <br/>
+         </li>
+         <li class="item">
+          <a href="https://bbs.ruliweb.com/community/board/300143">
+           유머 게시판
+          </a>
+         </li>
+         <li class="item">
+          <a href="https://bbs.ruliweb.com/community/board/300148">
+           정치유머 게시판
+          </a>
+         </li>
+         <li class="item">
+          <a href="https://bbs.ruliweb.com/community/board/300421">
+           플레이스테이션 게임 이야기
+          </a>
+         </li>
+         <li class="item">
+          <a href="https://bbs.ruliweb.com/community/board/300141">
+           자유 게시판
+          </a>
+         </li>
+         <li class="item">
+          <a href="https://bbs.ruliweb.com/community/board/300047">
+           엑스박스 게임 이야기
+          </a>
+         </li>
+         <li class="item">
+          <a href="https://bbs.ruliweb.com/community/board/300046">
+           엑스박스 잡담 게시판
+          </a>
+         </li>
+         <li class="item">
+          <a href="https://bbs.ruliweb.com/community/board/300079">
+           프라모델 이야기
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="col col_3">
+       <h3 class="title" style="height: 52px;font-size: 14px; line-height: 52px;">
+        신설 게시판
+       </h3>
+       <br/>
+       <div class="row aticle_wrapper">
+        <ul class="col col_6 border_box">
+         <li class="item" style="overflow: visible;">
+          <a class="block text_over" href="https://bbs.ruliweb.com/etcs/board/185595" target="_self" title="붉은 사막">
+           붉은 사막
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block text_over" href="https://bbs.ruliweb.com/etcs/board/185590" target="_self" title="폭스홀">
+           폭스홀
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block text_over" href="https://bbs.ruliweb.com/etcs/board/185587" target="_self" title="도카폰 UP! 몽환의 룰렛">
+           도카폰 UP! 몽환의 룰렛
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block text_over" href="https://bbs.ruliweb.com/etcs/board/185586" target="_self" title="몬스터 트럭 챔피언십">
+           몬스터 트럭 챔피언십
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block text_over" href="https://bbs.ruliweb.com/etcs/board/185584" target="_self" title="프로젝트 윙맨">
+           프로젝트 윙맨
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block text_over" href="https://bbs.ruliweb.com/etcs/board/185582" target="_self" title="트윈 미러">
+           트윈 미러
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block text_over" href="https://bbs.ruliweb.com/etcs/board/185579" target="_self" title="엠파이어 오브 신">
+           엠파이어 오브 신
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block text_over" href="https://bbs.ruliweb.com/etcs/board/185575" target="_self" title="리마더드: 토멘티드 파더스">
+           리마더드: 토멘티드 파더스
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block text_over" href="https://bbs.ruliweb.com/etcs/board/185574" target="_self" title="더비 스탈리온">
+           더비 스탈리온
+          </a>
+         </li>
+        </ul>
+        <ul class="col col_6 border_box">
+         <li class="item" style="overflow: visible;">
+          <a class="block text_over" href="https://bbs.ruliweb.com/etcs/board/185573" target="_self" title="임모탈 피닉스 라이징">
+           임모탈 피닉스 라이징
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block text_over" href="https://bbs.ruliweb.com/etcs/board/185571" target="_self" title="노스가드">
+           노스가드
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block text_over" href="https://bbs.ruliweb.com/etcs/board/185570" target="_self" title="식용계소녀 Food Girls">
+           식용계소녀 Food Girls
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block text_over" href="https://bbs.ruliweb.com/etcs/board/185564" target="_self" title="프로젝트 세카이 컬러풀 스테이지! feat.하츠네 미쿠">
+           프로젝트 세카이 컬러풀 스테이지! feat.하츠네 미쿠
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block text_over" href="https://bbs.ruliweb.com/etcs/board/185562" target="_self" title="팬티 파티">
+           팬티 파티
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block text_over" href="https://bbs.ruliweb.com/etcs/board/185560" target="_self" title="삼국지난무">
+           삼국지난무
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block text_over" href="https://bbs.ruliweb.com/etcs/board/185559" target="_self" title="클라우드펑크">
+           클라우드펑크
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block text_over" href="https://bbs.ruliweb.com/etcs/board/185558" target="_self" title="더 팔코니어">
+           더 팔코니어
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block text_over" href="https://bbs.ruliweb.com/etcs/board/185556" target="_self" title="아스가르드의 분노">
+           아스가르드의 분노
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="col col_3">
+       <h3 class="title" style="height: 52px;font-size: 14px; line-height: 52px;">
+        인기 검색어
+       </h3>
+       <br/>
+       <div class="row aticle_wrapper">
+        <ol class="col col_6 border_box" style="list-style-position: outside; list-style-type: decimal; padding-left: 20px;">
+         <li class="item" style="overflow: visible;">
+          <a class="block" href="https://bbs.ruliweb.com/search?q=원신" target="_self">
+           원신
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block" href="https://bbs.ruliweb.com/search?q=@" target="_self">
+           @
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block" href="https://bbs.ruliweb.com/search?q=라오" target="_self">
+           라오
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block" href="https://bbs.ruliweb.com/search?q=프리코네" target="_self">
+           프리코네
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block" href="https://bbs.ruliweb.com/search?q=소울워커" target="_self">
+           소울워커
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block" href="https://bbs.ruliweb.com/search?q=백신" target="_self">
+           백신
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block" href="https://bbs.ruliweb.com/search?q=환불" target="_self">
+           환불
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block" href="https://bbs.ruliweb.com/search?q=가테" target="_self">
+           가테
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block" href="https://bbs.ruliweb.com/search?q=소워" target="_self">
+           소워
+          </a>
+         </li>
+        </ol>
+        <ol class="col col_6 border_box" start="10" style="list-style-position: outside; list-style-type: decimal; padding-left: 20px;">
+         <li class="item" style="overflow: visible;">
+          <a class="block" href="https://bbs.ruliweb.com/search?q=사펑" target="_self">
+           사펑
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block" href="https://bbs.ruliweb.com/search?q=영국" target="_self">
+           영국
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block" href="https://bbs.ruliweb.com/search?q=정은경" target="_self">
+           정은경
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block" href="https://bbs.ruliweb.com/search?q=나경원" target="_self">
+           나경원
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block" href="https://bbs.ruliweb.com/search?q=사펑2077" target="_self">
+           사펑2077
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block" href="https://bbs.ruliweb.com/search?q=에픽" target="_self">
+           에픽
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block" href="https://bbs.ruliweb.com/search?q=히로아카" target="_self">
+           히로아카
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block" href="https://bbs.ruliweb.com/search?q=ps5" target="_self">
+           ps5
+          </a>
+         </li>
+         <li class="item" style="overflow: visible;">
+          <a class="block" href="https://bbs.ruliweb.com/search?q=사이버펑크" target="_self">
+           사이버펑크
+          </a>
+         </li>
+        </ol>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="max_width_outer">
+    <div class="max_width_inner">
+     <div class="adrrr ad_1150_290" id="ad_main_top_05" style="width:1150px;min-height:290px;">
+      <script src="//image.ruliweb.com/view/view.js?zoneid=35">
+      </script>
+     </div>
+    </div>
+   </div>
+   <div class="info_wrapper max_width_outer">
+    <div class="info max_width_inner">
+     <p class="link">
+      <a class="link_txt" href="https://bbs.ruliweb.com/etcs/board/10/read/1" target="_blank">
+       개인정보취급방침
+      </a>
+      <span class="txt_bar">
+       |
+      </span>
+      <a class="link_txt" href="https://bbs.ruliweb.com/etcs/board/10/read/2" target="_blank">
+       청소년보호정책
+      </a>
+      <span class="txt_bar">
+       |
+      </span>
+      <a class="link_txt" href="https://bbs.ruliweb.com/etcs/board/10/read/3" target="_blank">
+       이용약관
+      </a>
+      <span class="txt_bar">
+       |
+      </span>
+      <a class="link_txt" href="https://bbs.ruliweb.com/etcs/board/10/read/4" target="_blank">
+       기사제보/Press
+      </a>
+      <span class="txt_bar">
+       |
+      </span>
+      <a class="link_txt" href="https://bbs.ruliweb.com/etcs/board/10/read/5" target="_blank">
+       광고/제휴문의
+      </a>
+      <span class="txt_bar">
+       |
+      </span>
+      <a class="link_txt" href="https://bbs.ruliweb.com/etcs/board/10/read/6" target="_blank">
+       루리웹소개
+      </a>
+      <span class="txt_bar">
+       |
+      </span>
+      <a class="link_txt" href="javascript:;" onclick="app.cs_popup();">
+       고객센터
+      </a>
+      <span class="txt_bar">
+       |
+      </span>
+      <a class="link_txt rss_link" href="https://bbs.ruliweb.com/etcs/board/10/read/31">
+       루리웹 RSS
+      </a>
+      <span class="txt_bar">
+       |
+      </span>
+      <a class="link_txt" href="javascript:;" onclick="util_go_change('m');">
+       모바일웹으로 고정
+      </a>
+     </p>
+     <p class="link">
+      루리웹닷컴 | 서울시 송파구 올림픽로35가길 10 B-602 | 등록번호 서울 아02156 | 발행인 박병욱 | 편집인 이장원 | 등록일 2012.06.13 | 청소년보호책임자 진인환
+     </p>
+     <p class="copyright">
+      위 내용에 대한 저작권 및 법적 책임은 자료제공사 또는 글쓴이에 있으며 ruliweb의 입장과 다를 수 있습니다.
+      <br/>
+      Copyright (c)
+      <a href="//www.ruliweb.com">
+       www.ruliweb.com
+      </a>
+      All rights reserved.
+     </p>
+    </div>
+   </div>
+   <br/>
+  </footer>
+  <div class="notice_wrapper">
+   <div class="notice_common" id="push_bar" style="display: none">
+   </div>
+  </div>
+  <div id="popup">
+   <div class="dimmed">
+   </div>
+   <div class="popup_wrapper">
+    <div class="popup_inner_wrapper">
+     <div class="close">
+      X
+     </div>
+     <div class="title">
+     </div>
+     <div class="row">
+      <p class="content">
+      </p>
+     </div>
+     <div class="submit_wrapper row">
+      <button class="submit btn_default btn_ruli_dark col_12 border_box">
+      </button>
+      <button class="cancel btn_default btn_light col_12 border_box" style="display:none;">
+       취소
+      </button>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div id="context_menu">
+   <div class="context_menu">
+    <ul>
+     <li>
+      <a class="member_activity deco" href="javascript:;">
+       활동내역
+      </a>
+     </li>
+     <li>
+      <a class="writed_article deco">
+       작성글
+      </a>
+     </li>
+     <li>
+      <a class="message deco" href="javascript:;">
+       쪽지
+      </a>
+     </li>
+     <li>
+      <a class="mypi deco">
+       마이피
+      </a>
+     </li>
+    </ul>
+   </div>
+  </div>
+  <div id="image_layer">
+   <div class="dimmed">
+   </div>
+   <div class="" id="image_wrapper">
+    <div class="close text_center">
+     <strong>
+      X
+     </strong>
+    </div>
+    <div class="image_inner dragscroll">
+    </div>
+   </div>
+  </div>
+  <div id="quickmenu_layer_container">
+   <div id="quickmenu_layer">
+    <div class="dimmed">
+    </div>
+    <div class="popup_wrapper" id="quickmenu" style="width: 900px;">
+     <div class="row">
+      <div style="margin-bottom: 15px;">
+       <div class="col col_11">
+        <div class="header_search_wrapper row margin_none">
+         <form action="https://bbs.ruliweb.com/search" method="get">
+          <input class="btn_search col col_6" name="q" placeholder="검색/게시판 찾기" type="text" value=""/>
+          <button class="btn_default btn_light no_box_shadow col col_1" type="submit">
+           <i class="icon-search">
+           </i>
+          </button>
+         </form>
+         <a class="btn_game_apply btn_light col col_4 line_h_32 border_box padding_none" href="https://bbs.ruliweb.com/game/apply" target="_self">
+          게시판 신청
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+     <br/>
+     <br/>
+     <div id="recent_visited" style="display: none; background-color: #F5F5F5; margin-bottom: 10px">
+      <div style="background-color: #FFFFFF; color: rgb(26, 112, 220); box-shadow: rgb(221, 221, 221) 0px 1px 3px; box-sizing: border-box; border: 1px solid rgb(221, 221, 221); padding: 5px;">
+       <strong>
+        최근 방문 게시판
+       </strong>
+      </div>
+      <div id="visited_container" style="display: inline-block; width: 100%; vertical-align: middle;">
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!--googleon: all-->
+  <script src="https://ssl.pstatic.net/adimg3.search/adpost/js/adpost_show_ads_v2.min.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   function handle_naver_ads_response(response) {
+  app.nbp_ad_callback_v2(response);
+}
+  </script>
+  <script type="text/javascript">
+   NAVER_ADPOST_V2({
+	pageSize : "2",channel : "ruliweb.ch2",url : "https://bbs.ruliweb.com/search?q=%EB%AC%BC%ED%86%B5&c_page=1",query : "물통",});
+  </script>
+  <script>
+   (function(d,a,b,l,e,_) {
+d[b]=d[b]||function(){(d[b].q=d[b].q||[]).push(arguments)};e=a.createElement(l);
+e.async=1;e.charset='utf-8';e.src='//static.dable.io/dist/plugin.min.js';
+_=a.getElementsByTagName(l)[0];_.parentNode.insertBefore(e,_);
+})(window,document,'dable','script');
+dable('setService', 'ruliweb.com');
+dable('sendLog');
+  </script>
+  <script charset="UTF-8" type="text/javascript">
+   (function(w,d,s,i,c){var f=d.createElement(s);f.type="text/javascript";f.async=true;f.src="https://avd.innity.net/"+i+"/container_"+c+".js";var g=d.getElementsByTagName(s)[0];g.parentNode.insertBefore(f, g);})(window, document, "script", "462", "5ab0d7db47e704c7142d4fa5");
+  </script>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-15206174-1">
+  </script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag('js', new Date());
+
+gtag('config', 'UA-15206174-1');
+  </script>
+  <script src="/assets/ruliaddon/app.min.js?v=1705">
+  </script>
+ </body>
+</html>
+
+lis
+"물통" documents 0 crawling start from Ruliweb.
+Community 물통 crawling finish. spend time : 0:00:00.497787
+Community crawling finish. spend time : 0:00:00.497821

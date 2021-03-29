@@ -1,0 +1,4 @@
+*.scv
+ELMO/knowledge_based_sentiment_analysis/elmo_3/variables/variables.data-00000-of-00001
+ELMO/knowledge_based_sentiment_analysis/models/word2vec_ko.model.trainables.syn1neg.npy
+ELMO/knowledge_based_sentiment_analysis/models/word2vec_ko.model.wv.vectors.npy
