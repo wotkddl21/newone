@@ -17,6 +17,7 @@ if __name__ == '__main__' :
         multiprocessing.freeze_support()
         multiprocessing.set_start_method("spawn")
         mc = MultiCrawler()
+        start = datetime.now()
 #        keywords = ['홈트']
 
         keywords = sys.argv[1:]
@@ -30,16 +31,15 @@ if __name__ == '__main__' :
         #       mc.multiCrawlingRuliweb, mc.multiCrawlingMlbpark, mc.multiCrawlingInven, mc.multiCrawlingTodayhumor,
         #       mc.multiCrawlingPpomppu, mc.multiCrawlingClien, mc.multiCrawlingInstiz, mc.multiCrawlingCook82,mc.multiCrawlingNaver]
         
-#        processes = [mc.multiCrawlingFacebook,mc.multiCrawlingInsta,mc.multiCrawlingHygall, mc.multiCrawlingSlrclub,mc.multiCrawlingNaver,
-#               mc.multiCrawlingYgosu, mc.multiCrawlingHumoruniv, mc.multiCrawlingTheqoo, mc.multiCrawlingEtoland,
-#               mc.multiCrawlingFmkorea, mc.multiCrawlingPann, mc.multiCrawlingBobae, mc.multiCrawlingDcinside,
-#               mc.multiCrawlingRuliweb, mc.multiCrawlingMlbpark, mc.multiCrawlingInven, mc.multiCrawlingTodayhumor,
-#               mc.multiCrawlingPpomppu, mc.multiCrawlingClien, mc.multiCrawlingInstiz, mc.multiCrawlingCook82]
+        processes = [mc.multiCrawlingFacebook,mc.multiCrawlingInsta,mc.multiCrawlingHygall, mc.multiCrawlingSlrclub,mc.multiCrawlingNaver,
+               mc.multiCrawlingYgosu, mc.multiCrawlingHumoruniv, mc.multiCrawlingTheqoo, mc.multiCrawlingEtoland,
+               mc.multiCrawlingFmkorea, mc.multiCrawlingPann, mc.multiCrawlingBobae, mc.multiCrawlingDcinside,
+               mc.multiCrawlingRuliweb, mc.multiCrawlingMlbpark, mc.multiCrawlingInven, mc.multiCrawlingTodayhumor,
+               mc.multiCrawlingPpomppu, mc.multiCrawlingClien, mc.multiCrawlingInstiz, mc.multiCrawlingCook82]
         
         
         
  
-        processes = [mc.multiCrawlingInsta]
         start = datetime.now()
         for keyword in keywords:
            community_start = datetime.now()
