@@ -2,7 +2,8 @@
 
 # Developer : Jeong Wooyoung, EGLAB, Hongik University
 # Contact   : gunyoung20@naver.com
-
+# second Developer : Jaesang Park, Sogang University
+# contact : kw0095@naver.com
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
