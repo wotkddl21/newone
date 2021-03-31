@@ -2,7 +2,8 @@
 
 # Developer : Jeong Wooyoung, EGLAB, Hongik University
 # Contact   : gunyoung20@naver.com
-
+# second Developer : Jaesang Park, Sogang University
+# contact : kw0095@naver.com
 import pymysql
 from enum import Enum
 from date import Date
