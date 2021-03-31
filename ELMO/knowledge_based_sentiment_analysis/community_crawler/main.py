@@ -2,7 +2,8 @@
 
 # Developer : Jeong Wooyoung, EGLAB, Hongik University
 # Contact   : gunyoung20@naver.com
-
+# second Developer : Jaesang Park, Sogang University
+# contact : kw0095@naver.com
 import sys
 import multiprocessing
 from datetime import datetime
