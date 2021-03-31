@@ -1,5 +1,6 @@
 # coding: utf-8
-
+# Developer : Jaesang Park, Sogang University
+# contact : kw0095@naver.com
 from datetime import datetime
 
 import analysis
